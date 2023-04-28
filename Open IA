@@ -1,0 +1,18 @@
+crea un codigo capaz de crear tres partiones en el disco sda la primera de 512mb despues la segunda de 8gb y por untimo el restante en otra
+
+#!/bin/bash
+
+# este codigo crea tres particiones en el disco sda
+
+# primero, limpia la tabla
+sgdisk -Z /dev/sda
+
+# crea la primera particion de 512MB
+sgdisk -n 0:0:+512M -t 0:ef00 /dev/sda
+
+# crea la segunda particion de 8GB
+sgdisk -n 0:0:+8G -t 0:ef00 /dev/sda
+
+# crea la tercera particion con el espacio restante
+sgdisk -n 0:0:0 -t 0:ef00 /dev/sda
+
