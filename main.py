@@ -2,6 +2,7 @@
 from dataclasses \
     import dataclass
 import colorama
+import subprocess
 from colorama import Fore, Style
 import time
 
@@ -27,16 +28,9 @@ class conexion:
 if (conexion.comprobar_conexion() == True):
     print(Fore.GREEN + '# Aqui inicia' + Style.RESET_ALL)
     time.sleep(1)
+    print(subprocess.Popen(["chmod", "+x", "Preparacion.py"]).wait(), Fore.GREEN, end='\n' + '# Ok \n' + Style.RESET_ALL)
+    print(subprocess.Popen(["chmod", "+x", "Efesto.py"]).wait(), Fore.GREEN, end='\n' + '# Ok \n' + Style.RESET_ALL)
     import Preparacion
 else:
     print(Fore.GREEN + '# Aqui no inicia por falta de internet...' + Style.RESET_ALL)
-
-
-
-
-
-
-
-
-
 
