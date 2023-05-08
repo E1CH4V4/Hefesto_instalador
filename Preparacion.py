@@ -27,6 +27,7 @@ class preparacion:
 
 @dataclass
 class hola:
+    subprocess.Popen(["clear"]).wait()
     for ok in range(0, 6):
         match ok:
             case 0:
@@ -45,4 +46,5 @@ class hola:
                 exit(True)
         time.sleep(0.25)
 
+import Efesto
 
