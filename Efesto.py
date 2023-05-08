@@ -155,8 +155,3 @@ class configuracion_personal:
     time.sleep(tiempo_pausa)
     print(Fore.WHITE+ '# Finalizado con exito' + Style.RESET_ALL)
 
-
-
-
-
-
